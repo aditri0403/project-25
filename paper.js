@@ -6,15 +6,15 @@ class Paper {
             friction : 0.5,
             density : 1.2
         }
-        this.body = Matter.Bodies.circle(x,y,10,options);
-        this.width = 20;
-        this.height = 20;
+        this.body = Bodies.circle(x,y,55,options);
+        this.x=x;
+        this.y=y;
         this.image = loadImage('pictures/paper.png');
         World.add(world,this.body);
     }
     display(){
-        var pos = this.body.position;
-        image(this.image,pos.x,pos.y,10,10);
+        
+        image(this.image,this.body.position.x,this.body.position.y,70,70);
         
     }
 };
