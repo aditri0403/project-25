@@ -8,11 +8,11 @@ constructor (x,y,width,height){
     this.height = height;
     this.x=x;
     this.y=y;
-    this.image = loadImage('pictures/dustbingreen.png');
     World.add(world,this.body);
 }
 display(){
-    image(this.image,this.body.position.x,this.body.position.y,100,100);
+  
+    rect(this.body.position.x,this.body.position.y,this.width,this.height);
     
 }
 };
